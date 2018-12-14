@@ -24,7 +24,7 @@ class Card extends Component {
             {this.props.emoji && emoji.getUnicode(this.props.emoji)}
           </section>
           <section className="card__delete">
-            <button onClick={this.onDelete}>Delete</button>
+            <button onClick={this.onDelete}><strong>x</strong></button>
           </section>
         </section>
       </div>

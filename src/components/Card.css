@@ -48,15 +48,18 @@
 }
 
 button {
-  background-color: #424041;
+  /* background-color: #424041; */
+  background-color: #FFDED6;
   border: none;
   color: white;
-  padding: 8px 10px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 15px;
-  border-radius: 10px;
+  border-radius: 7px;
+  height: 27px;
+  width: 27px;
+  vertical-align:middle;
+  display:table-cell;
 }
 
 button:hover {
@@ -68,4 +71,12 @@ button:hover {
 
 button:focus {
   outline:0;
+}
+
+button:focus {
+  background: #FFDED6;
+  outline: none;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
 }
