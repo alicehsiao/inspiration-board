@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`card will match the Card Snapshot 1`] = `
+<div
+  className="card"
+>
+  <section
+    className="card__content"
+  >
+    <section
+      className="card__content-text"
+    >
+      My favorite winter activity is going back inside where it is warm.
+    </section>
+    <section
+      className="card__content-emoji"
+    >
+      🥴
+    </section>
+  </section>
+</div>
+`;
