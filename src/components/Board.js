@@ -12,6 +12,7 @@ class Board extends Component {
 
     this.state = {
       cards: [],
+      errorMessage: [],
     };
   }
 
@@ -29,8 +30,18 @@ class Board extends Component {
         this.setState({cards: cardList});
       })
       .catch((error) => {
-        console.log(error.message);
-        console.log(error);
+        let errorMsg = [];
+        errorMsg.push('Unable to load board: ');
+
+        if(error.response && error.response.data.errors){
+           errorMsg.push(error.response.data.errors.text[0]);
+        } else {
+          errorMsg.push(error.message);
+        }
+
+        this.setState({
+          errorMessage: errorMsg,
+        })
       })
   }
 
@@ -43,8 +54,18 @@ class Board extends Component {
         this.setState({cards: updatedCardList});
       })
       .catch((error) => {
-        console.log(error.message);
-        console.log(error);
+        let errorMsg = [];
+        errorMsg.push('Unable to delete card: ');
+
+        if(error.response && error.response.data.errors){
+           errorMsg.push(error.response.data.errors.text[0]);
+        } else {
+          errorMsg.push(error.message);
+        }
+
+        this.setState({
+          errorMessage: errorMsg,
+        })
       })
   }
 
@@ -62,7 +83,18 @@ class Board extends Component {
         });
       })
       .catch((error) => {
-        console.log(error.message);
+        let errorMsg = [];
+        errorMsg.push('Unable to add card: ');
+
+        if(error.response && error.response.data.errors){
+           errorMsg.push(error.response.data.errors.text[0]);
+        } else {
+          errorMsg.push(error.message);
+        }
+
+        this.setState({
+          errorMessage: errorMsg,
+        });
       })
   }
 
@@ -75,10 +107,18 @@ class Board extends Component {
     });
 
     return (
-      <div className="board">
-        { allCards }
-        <NewCardForm sendSubmissionCallback={ this.addCard } />
-      </div>
+      <section>
+        { this.state.errorMessage.length > 0 &&
+        <div className="validation-errors-display">
+          <div className="validation-errors-display__list">
+            { `${this.state.errorMessage[0]} ${this.state.errorMessage[1]}` }
+          </div>
+        </div> }
+        <div className="board">
+          { allCards }
+          { this.state.errorMessage.length === 0 && <NewCardForm sendSubmissionCallback={ this.addCard } />}
+        </div>
+      </section>
     )
   }
 
