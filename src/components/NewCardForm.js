@@ -53,20 +53,20 @@ class NewCardForm extends Component {
           </section>
           <section className="card__content-text">
             <form className="new-card-form__form" onSubmit={this.onFormSubmit}>
-              <section>
-                <label htmlFor="text">Text</label>
+              <section className="form_item">
+                <label htmlFor="text" className="label_item">Text</label>
                 <textarea name="text" onChange={ this.onFormChange } value={ this.state.text }></textarea>
               </section>
-              <section>
-                <label htmlFor="emoji">Emoji</label>
+              <section className="form_item">
+                <label htmlFor="emoji" className="label_item">Emoji</label>
                 <select className="new-card-form__form-select" name="emoji" onChange={ this.onFormChange } value={ this.state.emoji }>
                   {
                     this.generateSelectFields()
                   }
                 </select>
               </section>
-              <section>
-                <input type="submit" value="+" className="new-card-form__form-button" />
+              <section className="submit_item">
+                <input type="submit" value="+" className="new-card-form__form-button button" />
               </section>
             </form>
           </section>

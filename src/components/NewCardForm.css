@@ -13,15 +13,15 @@
 
 .new-card-form__form {
   font-size: 1em;
-  display: grid;
+  /* display: grid;
   grid-template-columns: [labels] auto [controls] 1fr;
   grid-auto-flow: row;
-  grid-gap: .8em;
+  grid-gap: .8em; */
 }
 
 .new-card-form__form-label  {
-  grid-column: labels;
-  grid-row: auto;
+  /* grid-column: labels;
+  grid-row: auto; */
 }
 
 .new-card-form__form-select,
@@ -29,8 +29,8 @@
 .new-card-form__form-button {
   font-family: 'Raleway', sans-serif;
   font-size: 1.25em;
-  grid-column: controls;
-  grid-row: auto;
+  /* grid-column: controls;
+  grid-row: auto; */
 }
 
 .new-card-form__form-button {
@@ -77,4 +77,52 @@
 .card__content-text {
   padding: 0;
   margin: 0;
+}
+
+.button {
+  /* background-color: #424041; */
+  background-color: #FFDED6;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 7px;
+  height: 27px;
+  width: 27px;
+  vertical-align:middle;
+  display:table-cell;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: #424041;
+  background: #FFDED6;
+  border: .5px black solid;
+}
+
+.button:focus {
+  outline:0;
+}
+
+.button:focus {
+  background: #FFDED6;
+  outline: none;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+.form_item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.label_item {
+  margin: 0 1rem;
+}
+
+.submit_item {
+  padding-top: 0.5rem;
 }
