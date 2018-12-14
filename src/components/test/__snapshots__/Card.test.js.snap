@@ -17,6 +17,15 @@ exports[`card will match the Card Snapshot 1`] = `
     >
       🥴
     </section>
+    <section
+      className="card__delete"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Delete
+      </button>
+    </section>
   </section>
 </div>
 `;

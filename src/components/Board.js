@@ -6,8 +6,6 @@ import './Board.css';
 import Card from './Card';
 // import NewCardForm from './NewCardForm';
 
-const URL = 'https://inspiration-board.herokuapp.com/boards/ahsiao/cards';
-
 class Board extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +16,8 @@ class Board extends Component {
   }
 
   componentDidMount() {
-    axios.get(URL)
+    const { url, boardName } = this.props;
+    axios.get(`${url}boards/${boardName}/cards`)
       .then((response) => {
         const cardList = response.data.map((element) => {
           const newCard = {
@@ -35,10 +34,10 @@ class Board extends Component {
   }
 
   deleteCard = (id) => {
-    axios.delete(`https://inspiration-board.herokuapp.com/cards/${id}`)
+    const { url } = this.props;
+    axios.delete(`${url}cards/${id}`)
       .then((response) => {
-        const card = this.state.cards.find((card) => card.id === response.data.card.id);
-        let updatedCardList = this.state.cards.filter(element => element !== card);
+        let updatedCardList = this.state.cards.filter(element => element.id !== response.data.card.id);
 
         this.setState({cards: updatedCardList});
       })

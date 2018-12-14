@@ -1,5 +1,6 @@
 .card {
-  background-color: #F4FF81;
+  /* background-color: #F4FF81; */
+  background-color: #FFDED6;
 
   padding: 1em 0;
   margin: 0.5rem;
@@ -44,4 +45,27 @@
 .card__delete {
   align-self: center;
   font-family: 'Permanent Marker', Helvetica, sans-serif;
+}
+
+button {
+  background-color: #424041;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #424041;
+  background: #FFDED6;
+  border: .5px black solid;
+}
+
+button:focus {
+  outline:0;
 }

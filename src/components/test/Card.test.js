@@ -7,7 +7,8 @@ describe('card', () => {
     const wrapper = shallow(<Card
              text="My favorite winter activity is going back inside where it is warm."
              emoji="woozy"
-             id={1}/>);
+             id={1}
+             onDeleteCallback={() => {}}/>);
 
     expect(wrapper).toMatchSnapshot();
   });
