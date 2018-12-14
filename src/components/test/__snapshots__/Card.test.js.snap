@@ -23,7 +23,9 @@ exports[`card will match the Card Snapshot 1`] = `
       <button
         onClick={[Function]}
       >
-        Delete
+        <strong>
+          x
+        </strong>
       </button>
     </section>
   </section>
