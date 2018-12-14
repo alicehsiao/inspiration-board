@@ -46,7 +46,7 @@ class NewCardForm extends Component {
 
   render() {
     return (
-      <div className="card">
+      <div className="card_form">
         <section className="card__content">
           <section className="new-card-form__header">
             <p>Add a card</p>

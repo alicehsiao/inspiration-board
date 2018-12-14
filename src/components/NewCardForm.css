@@ -39,9 +39,8 @@
   font-size: 1em;
 }
 
-.card {
-  /* background-color: #F4FF81; */
-  background-color: #FFDED6;
+.card_form {
+  background-color: #e4e4e4;
 
   padding: 1em 0;
   margin: 0.5rem;
@@ -81,7 +80,7 @@
 
 .button {
   /* background-color: #424041; */
-  background-color: #FFDED6;
+  background-color: #e4e4e4;
   border: none;
   color: white;
   text-align: center;
@@ -97,7 +96,7 @@
 .button:hover {
   cursor: pointer;
   color: #424041;
-  background: #FFDED6;
+  background: #e4e4e4;
   border: .5px black solid;
 }
 
@@ -106,7 +105,7 @@
 }
 
 .button:focus {
-  background: #FFDED6;
+  background: #e4e4e4;
   outline: none;
   -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;

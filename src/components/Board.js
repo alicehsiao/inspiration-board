@@ -53,12 +53,10 @@ class Board extends Component {
 
     axios.post(`${url}boards/${boardName}/cards`, newCard)
       .then((response) => {
-        console.log(response.data);
         newCard.id = response.data.id;
         const { cards } = this.state;
 
         cards.push(newCard);
-        console.log(cards);
         this.setState({
           cards,
         });
@@ -78,8 +76,8 @@ class Board extends Component {
 
     return (
       <div className="board">
-        <NewCardForm sendSubmissionCallback={ this.addCard } />
         { allCards }
+        <NewCardForm sendSubmissionCallback={ this.addCard } />
       </div>
     )
   }
